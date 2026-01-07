@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand Colors */
+  --color-brand-blue: #2563eb;
+  --color-brand-ink: #0A0A0B;
+  --color-brand-paper: #FAFAFA;
+  --color-brand-muted: #64748b;
+  --color-border-subtle: rgba(0, 0, 0, 0.05);
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-serif: var(--font-serif), serif;
+
+  /* Elevations */
+  --shadow-statement: 0 20px 80px -15px rgba(0, 0, 0, 0.1);
+  --shadow-glass: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+
+.bento-inner-glow {
+  box-shadow: inset 0 0 0 1px var(--color-border-subtle);
 }
+
+:root {
+  --background: var(--color-brand-paper);
+  --foreground: var(--color-brand-ink);
+}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Text selection - the little details count */
+::selection {
+  background: var(--color-brand-blue);
+  color: white;
+}
+
+/* Statement Typography Utilities */
+.heading-statement {
+  font-family: var(--font-serif);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-statement);
+}
+
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
 }
