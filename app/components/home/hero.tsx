@@ -21,7 +21,7 @@ export default function Hero() {
               The Gold Standard
             </span>
             
-            <h1 className="heading-statement text-7xl md:text-[110px] text-brand-ink mb-8">
+            <h1 className="heading-statement text-5xl sm:text-7xl md:text-[110px] text-brand-ink mb-8">
               Reliability <br />
               <span className="italic font-normal text-brand-muted/40">Redefined.</span>
             </h1>
@@ -30,17 +30,19 @@ export default function Hero() {
               Wrka isn't just an app; it's your private concierge for home excellence. We connect you with the top 1% of local craftsmen.
             </p>
 
-            <div className="flex items-center gap-6">
-              <button className="bg-brand-ink text-white px-10 py-5 rounded-2xl font-bold text-sm tracking-wide hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <button className="bg-brand-ink text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-sm tracking-wide hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                 BOOK A SERVICE
               </button>
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-paper bg-gray-200 overflow-hidden">
-                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="user" />
-                  </div>
-                ))}
-                <div className="pl-4 text-xs font-bold self-center text-brand-muted">
+              <div className="flex items-center">
+                <div className="flex -space-x-3">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-paper bg-gray-200 overflow-hidden">
+                      <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="user" />
+                    </div>
+                  ))}
+                </div>
+                <div className="pl-4 text-xs font-bold text-brand-muted">
                   +2k Happy Homeowners
                 </div>
               </div>

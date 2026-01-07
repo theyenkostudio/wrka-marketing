@@ -27,7 +27,7 @@ export default function SafetySection() {
           {/* <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-muted mb-4 block">
             Protocol 01 // Security
           </span> */}
-          <h2 className="heading-statement text-6xl text-brand-ink mb-16">
+          <h2 className="heading-statement text-4xl sm:text-5xl md:text-6xl text-brand-ink mb-16">
             Your Safety is <br />
             <span className="italic font-normal text-brand-muted/30">Non-Negotiable.</span>
           </h2>

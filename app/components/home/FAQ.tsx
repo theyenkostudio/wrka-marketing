@@ -26,16 +26,16 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32 bg-white border-t border-black/[0.03]">
+    <section className="py-16 md:py-24 lg:py-32 bg-white border-t border-black/[0.03]">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-12 gap-12">
-          
+        <div className="grid grid-cols-12 gap-6 md:gap-8 lg:gap-12">
+
           {/* Left Side: Static Header */}
           <div className="col-span-12 lg:col-span-4">
             {/* <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-muted mb-4 block">
               Support // FAQ
             </span> */}
-            <h2 className="heading-statement text-5xl text-brand-ink">
+            <h2 className="heading-statement text-3xl sm:text-4xl md:text-5xl text-brand-ink mb-6 lg:mb-0">
               Common <br />
               <span className="italic font-normal text-brand-muted/30">Questions.</span>
             </h2>
@@ -48,16 +48,16 @@ export default function FAQSection() {
                 <div key={i} className="border-b border-black/[0.08]">
                   <button
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                    className="w-full py-8 flex items-center justify-between text-left group"
+                    className="w-full py-5 md:py-8 flex items-center justify-between text-left group gap-4"
                   >
-                    <span className="text-xl font-bold text-brand-ink group-hover:text-brand-blue transition-colors">
+                    <span className="text-base sm:text-lg md:text-xl font-bold text-brand-ink group-hover:text-brand-blue transition-colors">
                       {faq.question}
                     </span>
                     <motion.div
                       animate={{ rotate: openIndex === i ? 45 : 0 }}
-                      className="text-brand-muted"
+                      className="text-brand-muted flex-shrink-0"
                     >
-                      <Plus className="w-6 h-6" />
+                      <Plus className="w-5 h-5 md:w-6 md:h-6" />
                     </motion.div>
                   </button>
 
@@ -69,7 +69,7 @@ export default function FAQSection() {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-8 text-brand-muted leading-relaxed max-w-2xl font-sans">
+                        <p className="pb-5 md:pb-8 text-sm md:text-base text-brand-muted leading-relaxed max-w-2xl font-sans">
                           {faq.answer}
                         </p>
                       </motion.div>

@@ -34,9 +34,9 @@ export default function AppShowcase() {
 
           {/* COPY SECTION */}
           <div className="w-full lg:w-1/2">
-            <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-muted mb-6 block">
+            {/* <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-muted mb-6 block">
               Experience // v1.0
-            </span>
+            </span> */}
             <h2 className="heading-statement text-5xl md:text-6xl text-brand-ink mb-8">
               A Skilled Pro <br />
               <span className="italic font-normal text-brand-muted/40">

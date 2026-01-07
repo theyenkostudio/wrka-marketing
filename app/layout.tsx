@@ -16,8 +16,8 @@ const playfair = Playfair_Display({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="light"> 
-      <body className={`${geistSans.variable} ${playfair.variable} antialiased`}>
+    <html lang="en" className="light overflow-x-hidden">
+      <body className={`${geistSans.variable} ${playfair.variable} antialiased overflow-x-hidden`}>
         <Header />
         <main className="mt-50">
           {children}
