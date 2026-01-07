@@ -54,7 +54,8 @@ function MarqueeTrack({ items, direction, speed }: { items: any[], direction: "l
           duration: 30, // Very slow, stately pace
           ease: "linear",
           repeat: Infinity,
-          paused: isPaused,
+          
+          // paused: isPaused,
         }}
       >
         {duplicatedItems.map((pro, i) => (
